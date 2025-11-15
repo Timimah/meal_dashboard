@@ -1,0 +1,61 @@
+.meal-counter {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+}
+
+.meal-name {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.counter-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.quantity {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.label {
+  color: #718096;
+  font-size: 1rem;
+}
+
+.counter-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.counter-controls button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 50px;
+}
+
+.counter-controls button:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.counter-controls button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

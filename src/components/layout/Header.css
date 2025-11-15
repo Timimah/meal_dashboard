@@ -1,0 +1,100 @@
+/* Header Styles with Green & Yellow Theme */
+.header {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+  color: white;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Decorative Background Pattern */
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--primary-yellow) 0%, transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--primary-yellow-dark) 0%, transparent 70%);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(to right, white, var(--primary-yellow-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-title::before {
+  content: '🍽️';
+  font-size: 2.5rem;
+  -webkit-text-fill-color: initial;
+}
+
+.header-subtitle {
+  margin: 0.75rem 0 0 0;
+  opacity: 0.95;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--primary-yellow-light);
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1.5rem var(--spacing-sm);
+  }
+  
+  .header-title {
+    font-size: 2rem;
+  }
+  
+  .header-title::before {
+    font-size: 1.75rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.75rem;
+  }
+  
+  .header-subtitle {
+    font-size: 0.95rem;
+  }
+}
